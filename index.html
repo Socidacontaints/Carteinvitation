@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Deux Pages Scrollables Fond Noir</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1080px;
+      height: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      background: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      width: 1080px;
+      height: 1920px; /* taille fixe pour chaque page */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%; /* pour que l'image ne dépasse pas la page */
+      object-fit: contain; /* garde l'image entière */
+    }
+
+    /* Pour rendre la page entière cliquable */
+    .clickable {
+      width: 1080px;
+      height: 1920px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none; /* supprime le soulignement du lien */
+    }
+  </style>
+</head>
+<body>
+  <!-- Page 1 -->
+  <section class="page">
+    <img src="image1.jpg" alt="Image Page 1">
+  </section>
+
+  <!-- Page 2 cliquable -->
+  <a href="document.pdf" target="_blank" class="clickable">
+    <section class="page">
+      <img src="image2.jpg" alt="Image Page 2">
+    </section>
+  </a>
+</body>
+</html>
